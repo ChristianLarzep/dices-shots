@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="icon" href="dice-6.png" alt="">
+        <title>Empedador</title>
+    </head>
+
+    <body>
+
+        <div class="wrapper clearfix">
+            <div class="team-0-panel active" id="team0">
+                <div class="team-name" id="name-0">Team 1</div>
+                <div class="team-score" id="score-0">0</div>
+                <div class="team-current-box">
+                    <div class="team-current-label">Points</div>
+                    <div class="team-current-score" id="current-0">0</div>
+                </div>
+            </div>
+
+            <div class="team-1-panel" id="team1">
+                <div class="team-name" id="name-1">Team 2</div>
+                <div class="team-score" id="score-1">0</div>
+                <div class="team-current-box">
+                    <div class="team-current-label">Points</div>
+                    <div class="team-current-score" id="current-1">0</div>
+                </div>
+            </div>
+
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New Game</button>
+            <button class="btn-sort"onclick="sortDares()"><i class="ion-ios-loop"></i>Sort Dares</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll Dices</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+            <img id="dado" src="dice-1.png" alt="Dice" class="dice1">
+            <img id="dado2" src="dice-1.png" alt="Dice" class="dice2">
+        </div>
+        <div class="dares_list">
+          <input class="dare-input" type="text" placeholder="One">
+          <input class="dare-input" type="text" placeholder="Two">
+          <input class="dare-input" type="text" placeholder="Three">
+          <input class="dare-input" type="text" placeholder="Four">
+          <input class="dare-input" type="text" placeholder="Five">
+          <input class="dare-input" type="text" placeholder="Six">
+          <input class="dare-input" type="text" placeholder="Seven">
+          <input class="dare-input" type="text" placeholder="Eight">
+          <input class="dare-input" type="text" placeholder="Nine">
+          <input class="dare-input" type="text" placeholder="Ten">
+          <button class="btn-submit"><i class="ion-android-checkmark-circle"></i>DONE</button>
+        </div>
+        <div id="myModal" class="modal">
+          <div id="modal-content" class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Punishment</h2>
+            </div>
+            <div class="modal-body">
+              <div class="thePunish" id="getpunish"></div>
+            </div>
+            <div class="hidden" id="teamCh">
+              <input type="button" class="button buttonWin" onclick="addPoints()" value="Win">
+              <input type="button"  class="button buttonFail" onclick="removePoints()" value="Fail">
+            </div>
+          </div>
+        </div>
+
+        <div id="id01" class="modal-shots">
+           <div class="modal-shots-content animate-zoom">
+              <header class="modal-shots-header color-header">
+                 <span onclick="document.getElementById('id01').style.display='none'"
+                 class=" color-header xlarge">&times;</span>
+                 <h2 class="label-modal-shots"></h2>
+              </header>
+
+              <div class="bar">
+                <div class="modal-shots-container">
+                <div>Cada miembro del equipo tomara los shots individualente</div>
+
+                </div>
+             </div>
+          </div>
+
+        </div>
+        <script src="app.js"></script>
+
+    </body>
+</html>
